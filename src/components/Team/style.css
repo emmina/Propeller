@@ -1,0 +1,9 @@
+.person {
+    border: 1px solid green;
+    border-radius: 100%;
+    margin-right: 2em;
+}
+
+.team {
+    margin: 2em !important;
+}

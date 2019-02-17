@@ -15,7 +15,7 @@ class App extends Component {
         <BrowserRouter>
           <Route path="/" component={Router} />
         </BrowserRouter>
-    </Provider>
+      </Provider>
     )
   }
 }
