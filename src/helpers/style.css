@@ -1,0 +1,31 @@
+.nav-border {
+    border: 1px solid green;
+}
+
+.logo-mockup {
+    padding: 1rem;
+    border: 1px solid green;
+    width: 6%;
+    text-align: center;
+}
+
+.footer {
+    border: 1px solid green;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+}
+
+.ftext-width {
+    width: 30%;
+}
+
+.logo-footer {
+    height: 100%;
+    margin-top: 2%;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-around;
+}
