@@ -1,3 +1,7 @@
 .about {
     margin-top: 2em;
 }
+
+.office-buttons {
+    display: inline;
+}

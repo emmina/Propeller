@@ -34,3 +34,14 @@
 .navlink-active {
     border-bottom: 1px solid green;
 }
+
+.about > div > div {
+    position: unset !important;
+    height: 250px !important;
+}
+
+.about > div > div > div {
+    width: 300px !important;
+    height: 250px !important;
+    position: relative !important;
+}

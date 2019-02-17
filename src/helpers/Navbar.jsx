@@ -6,7 +6,6 @@ import './style.css';
 class Navbar extends Component {
     render() {
         const { active } = this.props;
-        console.log(active)
 
         return (
             <nav className="nav-border nav navbar navbar-expand-lg navbar-light">

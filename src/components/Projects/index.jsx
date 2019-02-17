@@ -24,7 +24,6 @@ class Projects extends Component {
     render() {
         //const { projects } = this.props;
         const { projects } = this.state;
-        console.log(projects)
 
         return (
             <Screen active='projects'>
