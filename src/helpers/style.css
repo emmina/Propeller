@@ -30,3 +30,7 @@
     display: flex;
     justify-content: space-around;
 }
+
+.navlink-active {
+    border-bottom: 1px solid green;
+}

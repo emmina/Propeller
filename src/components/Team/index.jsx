@@ -26,7 +26,7 @@ class Team extends Component {
         const { team } = this.state;
 
         return (
-            <Screen active='about'>
+            <Screen active='team'>
                 <div className='row team'>
                 {team.map(member => <TeamMember member={member}/>)}
                 </div>

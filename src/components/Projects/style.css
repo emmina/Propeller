@@ -1,0 +1,10 @@
+.title {
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 2em;
+}
+
+.project-image {
+    border: 1px solid green;
+    border-radius: 50%;
+}
