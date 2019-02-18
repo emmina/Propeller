@@ -3,32 +3,27 @@ import { connect } from 'react-redux';
 
 import Screen from '../../helpers/Screen';
 import TeamMember from './TeamMember';
-import teamMembers from '../../data/teamMembers';
+import { teamActions } from '../../actions';
 
 import './style.css';
 
 class Team extends Component {
-    constructor(props) {
-        super(props);
 
-        this.state = {
-            team: teamMembers
-        }
-    }
     componentDidMount() {
         const { dispatch } = this.props;
 
-        //dispatch(teamActions.getMovies());
+        dispatch(teamActions.getMembers());
     }
 
     render() {
-        //const { team } = this.props;
-        const { team } = this.state;
+        const { members } = this.props;
 
         return (
             <Screen active='team'>
                 <div className='row team'>
-                {team.map(member => <TeamMember member={member}/>)}
+                    {members.map(function (member, i) {
+                        return <TeamMember key={i} member={member} />
+                    })}
                 </div>
             </Screen>
         )
@@ -36,10 +31,10 @@ class Team extends Component {
 }
 
 const mapStateToProps = (state, ownProps) => {
-    const { team } = state;
+    const { getMembers } = state;
 
     return {
-        //team: team.team
+        members: getMembers.members === undefined ? [] : getMembers.members.members
     };
 };
 

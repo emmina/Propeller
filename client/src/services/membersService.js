@@ -2,7 +2,6 @@ function getMembers() {
     const requestOptions = {
         method: 'GET'
     };
-    console.log('USLO')
 
     return fetch('/api/members', requestOptions).then(handleResponse);
 }

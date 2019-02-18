@@ -4,7 +4,6 @@ import { projectsService } from '../services';
 function getProjects() {
     return dispatch => {
         dispatch(request());
-        console.log('AKCIJA')
 
         projectsService.getProjects()
             .then(

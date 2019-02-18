@@ -2,9 +2,10 @@
   "name": "propeller",
   "version": "0.1.0",
   "dependencies": {
-    "react-scripts": "2.1.2",
     "body-parser": "^1.18.3",
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "react-scripts": "2.1.2",
+    "redis-server": "^1.2.2"
   },
   "scripts": {
     "client": "cd client && react-scripts start",

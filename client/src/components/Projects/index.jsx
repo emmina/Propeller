@@ -3,33 +3,28 @@ import { connect } from 'react-redux';
 
 import Screen from '../../helpers/Screen';
 import Project from './Project';
-import projects from '../../data/projects';
+import { projectsActions } from '../../actions';
 
 import './style.css';
 
 class Projects extends Component {
-    constructor(props) {
-        super(props);
 
-        this.state = {
-            projects: projects
-        }
-    }
     componentDidMount() {
         const { dispatch } = this.props;
 
-        //dispatch(projectsActions.getMovies());
+        dispatch(projectsActions.getProjects());
     }
 
     render() {
-        //const { projects } = this.props;
-        const { projects } = this.state;
+        const { projects } = this.props;
 
         return (
             <Screen active='projects'>
                 <h2 className='title'>PROJECTS</h2>
                 <div className='row justify-content-around projects'>
-                {projects.map(project => <Project project={project}/>)}
+                    {projects.map(function (project, i) {
+                        return <Project key={i} project={project} />
+                    })}
                 </div>
             </Screen>
         )
@@ -37,10 +32,10 @@ class Projects extends Component {
 }
 
 const mapStateToProps = (state, ownProps) => {
-    const { projects } = state;
+    const { getProjects } = state;
 
     return {
-        //projects: projects.projects
+        projects: getProjects.projects === undefined ? [] : getProjects.projects.projects
     };
 };
 

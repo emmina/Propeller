@@ -2,7 +2,6 @@ function getProjects() {
     const requestOptions = {
         method: 'GET'
     };
-    console.log('USLO')
 
     return fetch('/api/projects', requestOptions).then(handleResponse);
 }

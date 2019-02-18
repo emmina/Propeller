@@ -4,7 +4,6 @@ import { membersService } from '../services';
 function getMembers() {
     return dispatch => {
         dispatch(request());
-        console.log('AKCIJA')
 
         membersService.getMembers()
             .then(

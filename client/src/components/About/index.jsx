@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 
 import aboutImage from '../../assets/about_image.jpeg';
 import { Screen, Map } from '../../helpers';
-import offices from '../../data/offices';
 import { aboutActions } from '../../actions';
 
 import './style.css';
@@ -13,18 +12,14 @@ class About extends Component {
         super(props);
 
         this.state = {
-            offices: offices,
             showOffice: 0,
         }
-
-        console.log('CONSTRUCT')
 
         this.onClickOffice = this.onClickOffice.bind(this);
     }
     
     componentWillMount() {
         const { dispatch } = this.props;
-        console.log('WILL')
 
         dispatch(aboutActions.getOffices());
     }
@@ -40,9 +35,8 @@ class About extends Component {
     }
 
     render() {
-        //const { offices } = this.props;
-        const { offices, showOffice } = this.state;
-        console.log('RENDER')
+        const { offices } = this.props;
+        const { showOffice } = this.state;
 
         return (
             <Screen active='about'>
@@ -63,11 +57,10 @@ class About extends Component {
 }
 
 const mapStateToProps = (state, ownProps) => {
-    const { offices } = state;
-    console.log(state, ownProps)
+    const { getOffices } = state;
 
     return {
-        offices: offices === undefined ? [] : offices.offices
+        offices: getOffices.offices === undefined ? [] : getOffices.offices.offices
     };
 };
 

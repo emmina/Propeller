@@ -2,13 +2,11 @@ function getOffices() {
     const requestOptions = {
         method: 'GET'
     };
-    console.log('USLO')
 
     return fetch('/api/offices', requestOptions).then(handleResponse);
 }
 
 function handleResponse(response) {
-    console.log(response)
     return response.text().then(text => {
         const data = text && JSON.parse(text);
         if (!response.ok) {
