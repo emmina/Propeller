@@ -1,2 +1,5 @@
-node_modules*
-build*
+# Node
+node_modules/*
+
+# Project
+dist/
