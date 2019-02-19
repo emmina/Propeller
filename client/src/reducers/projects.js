@@ -6,11 +6,11 @@ function getProjects(state = initialState, action) {
     switch (action.type) {
         case constants.GETPROJECTS_REQUEST:
             return {
-                projects: action.projects
+                result: action.projects
             };
         case constants.GETPROJECTS_SUCCESS:
             return {
-                projects: action.projects
+                result: action.projects
             };
         case constants.GETPROJECTS_FAILURE:
             return {};

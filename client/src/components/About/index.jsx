@@ -60,7 +60,7 @@ const mapStateToProps = (state, ownProps) => {
     const { getOffices } = state;
 
     return {
-        offices: getOffices.offices === undefined ? [] : getOffices.offices.offices
+        offices: getOffices.result === undefined ? [] : getOffices.result.offices
     };
 };
 

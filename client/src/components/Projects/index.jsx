@@ -35,7 +35,7 @@ const mapStateToProps = (state, ownProps) => {
     const { getProjects } = state;
 
     return {
-        projects: getProjects.projects === undefined ? [] : getProjects.projects.projects
+        projects: getProjects.result === undefined ? [] : getProjects.result.projects
     };
 };
 
