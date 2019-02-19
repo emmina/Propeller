@@ -6,7 +6,9 @@ Before you start project, run command:
 
 ### `npm run dev`
 
-After that, in the project directory, you can run:
+Then go inside <strong>client</strong> directory and run the same command.<br>
+
+After that, go back to the project directory and run:
 
 ### `npm run dev`
 
